@@ -25,8 +25,8 @@ class SplashActivity : AppCompatActivity() {
         val anim = AnimationUtils.loadAnimation(this,R.anim.splash_animation)
         anim.reset()
 
-        ivLogo!!.clearAnimation()
-        ivLogo!!.startAnimation(anim)
+        ivLogo.clearAnimation()
+        ivLogo.startAnimation(anim)
 
         Handler().postDelayed({
             val intent = Intent(this,MainActivity::class.java)
