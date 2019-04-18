@@ -29,7 +29,7 @@ class SplashActivity : AppCompatActivity() {
         ivLogo.startAnimation(anim)
 
         Handler().postDelayed({
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this,FoodActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
             this.finish()
