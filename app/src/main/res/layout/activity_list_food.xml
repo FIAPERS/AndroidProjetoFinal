@@ -7,4 +7,6 @@
         android:layout_height="match_parent"
         tools:context=".ListFoodActivity">
 
+    <include layout="@layout/content_list_food" />
+
 </android.support.constraint.ConstraintLayout>
