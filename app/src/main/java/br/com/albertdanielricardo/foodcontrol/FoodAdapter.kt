@@ -1,4 +1,5 @@
 package br.com.albertdanielricardo.foodcontrol
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -28,10 +29,22 @@ class FoodAdapter(var foods: List<Food>):
         val food = foods[i]
         holder.tvProduto.text = food.produto
         holder.tvDescricao.text = food.descricao
+
+        holder?.foodProduto = food
     }
 
-    class FoodViewHolder(v: View) : RecyclerView.ViewHolder(v){
+    class FoodViewHolder(v: View, var foodProduto: Food? = null) : RecyclerView.ViewHolder(v){
         var tvProduto: TextView = v.findViewById(R.id.tvProduto)
         var tvDescricao: TextView = v.findViewById(R.id.tvDescricao)
+
+        init {
+            v.setOnClickListener {
+                val intent = Intent(v.context, FoodActivity::class.java)
+                intent.putExtra("produto",foodProduto?.produto)
+                intent.putExtra("descricao",foodProduto?.descricao)
+                intent.putExtra("id",foodProduto?.id)
+                v.context.startActivity(intent)
+            }
+        }
     }
 }
