@@ -31,11 +31,9 @@ class ListFoodActivity : AppCompatActivity() {
 
         mostrarDados()
 
-        var rvfoods = findViewById<RecyclerView>(R.id.rvFoods)
-
-        rvfoods.layoutManager = LinearLayoutManager (this)
+        rvFoods.layoutManager = LinearLayoutManager (this)
         adapter = FoodAdapter(foods!!)
-        rvfoods.adapter = adapter
+        rvFoods.adapter = adapter
     }
 
 
