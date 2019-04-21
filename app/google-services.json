@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "978797635667",
+    "firebase_url": "https://androidprojetofinal.firebaseio.com",
+    "project_id": "androidprojetofinal",
+    "storage_bucket": "androidprojetofinal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978797635667:android:34300db4b2a33d05",
+        "android_client_info": {
+          "package_name": "br.com.albertdanielricardo.foodcontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978797635667-4c82rs4su4c5o76001bb2vdf4kc386ri.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.albertdanielricardo.foodcontrol",
+            "certificate_hash": "454e5a63f7f809edabd212eba5632f903d0c7349"
+          }
+        },
+        {
+          "client_id": "978797635667-fbss5bg3jtkeii3dfn9o9jlq18h80dr1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjJ_Cv_ucYRP_2lf6cu0QC8Gs_Op00srw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978797635667-fbss5bg3jtkeii3dfn9o9jlq18h80dr1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
