@@ -15,7 +15,7 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="32dp" android:layout_marginStart="32dp"/>
     <TextView
-            android:text="@string/ratting"
+            android:text="@string/rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView7" android:layout_marginTop="32dp"
@@ -65,13 +65,20 @@
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="28dp"
             app:layout_constraintTop_toBottomOf="@+id/txtTelefone" app:layout_constraintHorizontal_bias="0.451"/>
-    <com.google.android.gms.maps.MapView
+
+    <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="331dp"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:id="@+id/mvMapa" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="8dp" android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/imgFotoPreview" app:layout_constraintHorizontal_bias="0.468"/>
+            app:layout_constraintTop_toBottomOf="@+id/imgFotoPreview" app:layout_constraintHorizontal_bias="0.468"
+    />
+
+
+
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
