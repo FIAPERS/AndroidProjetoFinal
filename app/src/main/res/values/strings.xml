@@ -11,4 +11,14 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="ratting">Ratting</string>
+    <string name="description">Description</string>
+    <string name="address">Address</string>
+    <string name="num_address">Number</string>
+    <string name="phone">Phone</string>
+    <string name="save">Save</string>
+    <string name="add_image">Add Image</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
 </resources>

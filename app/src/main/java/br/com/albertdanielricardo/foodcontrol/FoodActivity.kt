@@ -1,6 +1,4 @@
 package br.com.albertdanielricardo.foodcontrol
-
-import android.arch.persistence.room.Database
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -8,50 +6,73 @@ import android.widget.EditText
 import br.com.albertdanielricardo.foodcontrol.dao.BancoDeDados
 import br.com.albertdanielricardo.foodcontrol.model.Food
 import android.os.AsyncTask
+import android.widget.ImageView
+import android.widget.RatingBar
+import android.arch.persistence.room.Database
 import android.content.Intent
+
 
 class FoodActivity : AppCompatActivity() {
 
-    private lateinit var edtProduto: EditText
+    private lateinit var edtRestaurante: EditText
+    private lateinit var rbNota: RatingBar
     private lateinit var edtDescricao: EditText
-    private lateinit var btnAdicionar: Button
+    private lateinit var edtEndereco: EditText
+    private lateinit var edtNumEdereco: EditText
+    private lateinit var edtTelefone: EditText
+    private lateinit var imgFoto: ImageView
+    private lateinit var btnSalvar: Button
+
     private var db: BancoDeDados? = null
-
     private var id: Int?=null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
 
-        edtProduto = findViewById(R.id.edtProduto)
+        edtRestaurante = findViewById(R.id.edtRestaurante)
+        rbNota = findViewById(R.id.rbNota)
         edtDescricao = findViewById(R.id.edtDescricao)
-        btnAdicionar = findViewById(R.id.btnAdicionar)
+        edtEndereco = findViewById(R.id.edtEndereco)
+        edtNumEdereco = findViewById(R.id.edtNumEnd)
+        edtTelefone = findViewById(R.id.edtTelefone)
+        imgFoto = findViewById(R.id.imgFoto)
+        btnSalvar = findViewById(R.id.btnSalvar)
 
-        if (intent.getStringExtra("produto") != null){
-            val intentProduto = intent.getStringExtra("produto")
+        if (intent.getStringExtra("restaurante") != null){
+            val intentRestaurante = intent.getStringExtra("restaurante")
+            val intentEndereco = intent.getStringExtra("endereco")
             val intentDescricao = intent.getStringExtra("descricao")
+            val intentNumEndereco = intent.getStringExtra("numendereco")
+            val intetNota = intent.getFloatExtra("rbNota",0.0F)
+            val intentTelefone = intent.getStringExtra("telefone")
             id = intent.getIntExtra("id",0)
 
-            edtProduto?.setText(intentProduto)
-            edtDescricao?.setText(intentDescricao.toString())
+            edtRestaurante?.setText(intentRestaurante)
+            rbNota?.setRating(intetNota)
+            edtDescricao?.setText(intentDescricao)
+            edtNumEdereco?.setText(intentNumEndereco)
+            edtEndereco?.setText(intentEndereco)
+            edtTelefone?.setText(intentTelefone)
+
         }
 
-        btnAdicionar.setOnClickListener {
+        btnSalvar.setOnClickListener {
 
+            //Editar registro
             if(id != null){
                 db = BancoDeDados.getDatabase(this)
-                val food = Food(intent.getIntExtra("id",0),edtProduto.text.toString(), edtDescricao.text.toString())
-                if (food.produto !="")UpdateAsyncTask(db!!).execute(food)
+                val food = Food(intent.getIntExtra("id",0),edtRestaurante.text.toString(),rbNota.getRating(), edtDescricao.text.toString()
+                    ,edtEndereco.text.toString(),edtNumEdereco.text.toString(),edtTelefone.text.toString())
+                if (food.restaurante !="")UpdateAsyncTask(db!!).execute(food)
                 finish()
-            }else{
+            }else{//Salvar novo registro
                 db = BancoDeDados.getDatabase(this)
-                val food = Food(edtProduto.text.toString(), edtDescricao.text.toString())
-                if (food.produto !="")InsertAsyncTask(db!!).execute(food)
+               val food = Food(edtRestaurante.text.toString(),rbNota.getRating(), edtDescricao.text.toString()
+                   ,edtEndereco.text.toString(),edtNumEdereco.text.toString(),edtTelefone.text.toString())
+                if (food.restaurante !="")InsertAsyncTask(db!!).execute(food)
                 finish()
             }
-
-
         }
     }
 

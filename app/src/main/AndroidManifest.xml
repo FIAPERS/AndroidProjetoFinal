@@ -13,6 +13,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".PreviewFoodActivity">
+        </activity>
         <activity android:name=".ListFoodActivity">
         </activity>
         <activity android:name=".FoodActivity">
@@ -27,9 +29,10 @@
                 android:name=".LoginActivity"
                 android:label="@string/title_activity_login">
         </activity>
-        <activity android:name=".SplashActivity" >
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

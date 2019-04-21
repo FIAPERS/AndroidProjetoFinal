@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_list_food.*
 import br.com.albertdanielricardo.foodcontrol.FoodAdapter
 
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
@@ -23,14 +24,14 @@ class ListFoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_food)
-        //setSupportActionBar(toolbar)
 
-        /*fab.setOnClickListener {
-            v
-        }*/
+        flbAdicionar.setOnClickListener {
+            val intent = Intent(this,FoodActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            startActivity(intent)
+        }
 
         mostrarDados()
-
         rvFoods.layoutManager = LinearLayoutManager (this)
         adapter = FoodAdapter(foods!!)
         rvFoods.adapter = adapter

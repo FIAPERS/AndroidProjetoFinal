@@ -7,7 +7,7 @@ import android.content.Context
 import br.com.albertdanielricardo.foodcontrol.dao.FoodDAO
 import br.com.albertdanielricardo.foodcontrol.model.Food
 
-@Database(entities = arrayOf(Food::class), version = 1)
+@Database(entities = arrayOf(Food::class), version = 4, exportSchema = false)
 abstract class BancoDeDados : RoomDatabase(){
 
     abstract fun foodDAO(): FoodDAO
@@ -20,6 +20,7 @@ abstract class BancoDeDados : RoomDatabase(){
                 INSTANCE = Room.databaseBuilder(context.applicationContext,
                     BancoDeDados::class.java,
                     "foodsdbs")
+                    .fallbackToDestructiveMigration()
                     .build()
             }
             return INSTANCE
