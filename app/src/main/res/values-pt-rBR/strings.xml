@@ -21,4 +21,12 @@
     <string name="add_image">Adicionar Imagem</string>
     <string name="edit">Editar</string>
     <string name="delete">Deletar</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="permission_inform">Informe permissão para acesso interno</string>
+    <string name="shared">Compartilhar</string>
+    <string name="initial_shared_body">(Food Control - Google Play Store) \n\n Informações: \n\n</string>
+    <string name="chosser_title">Compartilhar com</string>
+    <string name="about_shared">Distribuído por: Fiapers Desenvolvimento</string>
+    <string name="extra_subject">"Informações sobre: "</string>
+    <string name="call">Ligar</string>
 </resources>

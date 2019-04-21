@@ -48,7 +48,7 @@
             app:layout_constraintEnd_toStartOf="@+id/edtRestaurante" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.444"/>
     <TextView
-            android:text="@string/rating"
+            android:text="@string/ratting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView3" android:layout_marginTop="52dp"
@@ -119,8 +119,10 @@
             app:layout_constraintTop_toBottomOf="@+id/edt" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
             app:layout_constraintEnd_toStartOf="@+id/edtTelefone" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.555"/>
-    <EditText
+            android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.555"
+
+            />
+    <com.santalu.maskedittext.MaskEditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
@@ -128,7 +130,8 @@
             android:id="@+id/edtTelefone" android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/edtEndereco" android:layout_marginEnd="96dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="96dp"
-            android:importantForAutofill="no"/>
+            android:importantForAutofill="no"
+            app:met_mask="+55(###)########"/>
     <Button
             android:text="@string/add_image"
             android:layout_width="wrap_content"

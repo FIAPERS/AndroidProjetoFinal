@@ -1,9 +1,6 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
-
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.gms.google-services'
 com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
@@ -44,11 +41,9 @@ dependencies {
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
     kapt 'android.arch.persistence.room:compiler:1.1.1'
-
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
-
-
-    //implementation 'com.google.android.gms:play-services:8.1.0'
+    implementation 'pub.devrel:easypermissions:1.2.0'
+    implementation 'com.github.santalu:mask-edittext:1.0.2'
 }
