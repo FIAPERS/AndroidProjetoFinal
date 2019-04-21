@@ -48,7 +48,6 @@ class PreviewFoodActivity : AppCompatActivity(), OnMapReadyCallback{
         val endereco = intent.getStringExtra("endereco") + intent.getStringExtra("numero")
         val addressGeocoding = geocoder.getFromLocationName(endereco, 1)
 
-        //val sydney = LatLng(-34.0, 151.0)
         val localRestaurante = LatLng(addressGeocoding[0].latitude, addressGeocoding[0].longitude)
         val tituloMarker = intent.getStringExtra("restaurante")
         mMap.addMarker(MarkerOptions().position(localRestaurante).title(tituloMarker))
