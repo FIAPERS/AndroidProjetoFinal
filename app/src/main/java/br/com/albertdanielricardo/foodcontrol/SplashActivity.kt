@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import com.google.firebase.FirebaseApp
+import com.google.firebase.iid.FirebaseInstanceId
 
 class SplashActivity : AppCompatActivity() {
 
@@ -17,9 +19,16 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        FirebaseApp.initializeApp(this)
+        FirebaseInstanceId.getInstance().instanceId
+
         ivLogo = findViewById(R.id.ivLogo)
         carregar()
+
+
     }
+
+
 
     fun carregar() {
         val anim = AnimationUtils.loadAnimation(this,R.anim.splash_animation)
