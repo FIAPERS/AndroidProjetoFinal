@@ -11,8 +11,10 @@ import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.View
 import br.com.albertdanielricardo.foodcontrol.model.Food
+import com.google.firebase.iid.FirebaseInstanceId
 import kotlinx.android.synthetic.main.content_list_food.*
 
 class ListFoodActivity : AppCompatActivity() {
@@ -38,6 +40,8 @@ class ListFoodActivity : AppCompatActivity() {
         rvFoods.layoutManager = LinearLayoutManager (this)
         adapter = FoodAdapter(foods!!)
         rvFoods.adapter = adapter
+
+
     }
 
 
