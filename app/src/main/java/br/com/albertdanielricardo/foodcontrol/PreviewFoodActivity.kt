@@ -134,7 +134,8 @@ class PreviewFoodActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermiss
             db = BancoDeDados.getDatabase(this)
             val food = Food(intent.getIntExtra("id",0),intentRestaurante,intentRbNota, intentDescricao
                 ,intentEndereco,intentNumEndereco,intentTelefone)
-            if (food.restaurante !="")DeleteAsyncTask(db!!).execute(food)
+            if (food.restaurante !="")
+                DeleteAsyncTask(db!!).execute(food)
             finish()
         }
 
