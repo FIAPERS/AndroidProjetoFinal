@@ -30,6 +30,9 @@ class FoodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
 
+        supportActionBar!!.title = getString(R.string.backbutton)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         edtRestaurante = findViewById(R.id.edtRestaurante)
         rbNota = findViewById(R.id.rbNota)
         edtDescricao = findViewById(R.id.edtDescricao)

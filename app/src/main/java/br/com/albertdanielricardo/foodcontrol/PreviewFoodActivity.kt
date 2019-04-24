@@ -61,6 +61,9 @@ class PreviewFoodActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermiss
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_preview_food)
 
+        supportActionBar!!.title = getString(R.string.backbutton)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         txtRestaurante = findViewById(R.id.txtRestaurante)
         rbNotaPreview = findViewById(R.id.rbNotaPreview)
         txtDescricao = findViewById(R.id.txtDescricao)

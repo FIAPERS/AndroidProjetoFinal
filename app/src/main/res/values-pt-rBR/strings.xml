@@ -29,4 +29,12 @@
     <string name="about_shared">Distribuído por: Fiapers Desenvolvimento</string>
     <string name="extra_subject">"Informações sobre: "</string>
     <string name="call">Ligar</string>
+    <string name="close_app">Fechar app</string>
+    <string name="logout">Sair do app</string>
+    <string name="configuration">Configuração</string>
+    <string name="list_food_activity">Lista de Restaurantes</string>
+    <string name="food_activity">Adicionar novo Restaurante</string>
+    <string name="about_activity">Sobre</string>
+    <string name="backbutton">Voltar</string>
+    <string name="menu_title">Menu - Food Control</string>
 </resources>

@@ -25,6 +25,9 @@ class ListFoodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_food)
 
+        supportActionBar!!.title = getString(R.string.backbutton)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         flbAdicionar.setOnClickListener {
             val intent = Intent(this,FoodActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
