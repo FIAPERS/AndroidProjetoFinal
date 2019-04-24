@@ -17,18 +17,15 @@
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintHorizontal_bias="0.497"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imgFoto"
-            app:layout_constraintVertical_bias="0.793"/>
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/edtTelefone"/>
     <EditText
             android:layout_width="304dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/edtRestaurante"
-            android:layout_marginTop="56dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="4dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="4dp"
-            android:importantForAutofill="no"/>
+            android:importantForAutofill="no" tools:layout_editor_absoluteY="56dp"
+            tools:layout_editor_absoluteX="103dp"/>
     <EditText
             android:layout_width="306dp"
             android:layout_height="wrap_content"
@@ -42,11 +39,8 @@
             android:text="@string/restaurant"
             android:layout_width="wrap_content"
             android:layout_height="28dp"
-            android:id="@+id/textView" android:layout_marginTop="64dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/edtRestaurante" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.444"/>
+            android:id="@+id/textView"
+            tools:layout_editor_absoluteY="68dp" tools:layout_editor_absoluteX="11dp"/>
     <TextView
             android:text="@string/ratting"
             android:layout_width="wrap_content"
@@ -102,15 +96,6 @@
             android:id="@+id/edtNumEnd" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="4dp" android:layout_marginRight="4dp" android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/edtDescricao" android:importantForAutofill="no"/>
-    <ImageView
-            android:layout_width="355dp"
-            android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
-            android:id="@+id/imgFoto"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/edtTelefone" android:contentDescription="TODO"
-            android:background="@mipmap/ic_launcher_round"/>
     <TextView
             android:text="@string/phone"
             android:layout_width="wrap_content"
@@ -131,13 +116,5 @@
             app:layout_constraintTop_toBottomOf="@+id/edtEndereco" android:layout_marginEnd="96dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="96dp"
             android:importantForAutofill="no"
-            app:met_mask="+55(###)########"/>
-    <Button
-            android:text="@string/add_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnImagem"
-            app:layout_constraintTop_toTopOf="@+id/imgFoto" app:layout_constraintBottom_toBottomOf="@+id/imgFoto"
-            app:layout_constraintEnd_toEndOf="@+id/imgFoto"
-            app:layout_constraintStart_toStartOf="@+id/imgFoto"/>
+            app:met_mask="(##)########"/>
 </android.support.constraint.ConstraintLayout>

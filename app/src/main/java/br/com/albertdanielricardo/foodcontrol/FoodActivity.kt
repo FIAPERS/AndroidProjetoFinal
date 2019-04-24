@@ -39,7 +39,6 @@ class FoodActivity : AppCompatActivity() {
         edtEndereco = findViewById(R.id.edtEndereco)
         edtNumEdereco = findViewById(R.id.edtNumEnd)
         edtTelefone = findViewById(R.id.edtTelefone)
-        imgFoto = findViewById(R.id.imgFoto)
         btnSalvar = findViewById(R.id.btnSalvar)
 
         if (intent.getStringExtra("restaurante") != null){
