@@ -114,7 +114,7 @@
     <EditText
             android:layout_width="125dp"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:ems="10"
             android:id="@+id/edtNumEnd"
             android:importantForAutofill="no"
@@ -135,7 +135,7 @@
     <com.santalu.maskedittext.MaskEditText
             android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="phone"
             android:ems="10"
             android:id="@+id/edtTelefone"
             android:importantForAutofill="no"

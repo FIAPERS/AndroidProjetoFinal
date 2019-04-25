@@ -40,4 +40,7 @@
     <string name="e_mail">e-mail</string>
     <string name="create_an_account">Create an Account</string>
     <string name="login">Login</string>
+    <string name="toast_validate_restaurant">Field Restaurant must have a value!</string>
+    <string name="toast_error_create_user">Error creating user.</string>
+    <string name="toast_success_create_user">User created successfully!</string>
 </resources>

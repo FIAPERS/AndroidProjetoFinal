@@ -1,15 +1,17 @@
 package br.com.albertdanielricardo.foodcontrol
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import br.com.albertdanielricardo.foodcontrol.dao.BancoDeDados
 import br.com.albertdanielricardo.foodcontrol.model.Food
 import android.os.AsyncTask
-import android.widget.ImageView
-import android.widget.RatingBar
 import android.arch.persistence.room.Database
 import android.content.Intent
+import android.graphics.Color
+import android.widget.*
+import android.widget.TextView
+import android.widget.Toast
+
+
 
 
 class FoodActivity : AppCompatActivity() {
@@ -59,23 +61,47 @@ class FoodActivity : AppCompatActivity() {
 
         }
 
+        fun validaCampos() : Boolean {
+
+            if(edtRestaurante.text.toString() == ""){
+                Toast.makeText(this, R.string.toast_validate_restaurant, Toast.LENGTH_SHORT).show()
+                return false
+            }
+            return true
+        }
+
         btnSalvar.setOnClickListener {
 
-            //Editar registro
-            if(id != null){
-                db = BancoDeDados.getDatabase(this)
-                val food = Food(intent.getIntExtra("id",0),edtRestaurante.text.toString(),rbNota.getRating(), edtDescricao.text.toString()
-                    ,edtEndereco.text.toString(),edtNumEdereco.text.toString(),edtTelefone.text.toString())
-                if (food.restaurante !="")UpdateAsyncTask(db!!).execute(food)
-                finish()
-            }else{//Salvar novo registro
-                db = BancoDeDados.getDatabase(this)
-               val food = Food(edtRestaurante.text.toString(),rbNota.getRating(), edtDescricao.text.toString()
-                   ,edtEndereco.text.toString(),edtNumEdereco.text.toString(),edtTelefone.text.toString())
-                if (food.restaurante !="")InsertAsyncTask(db!!).execute(food)
-                finish()
+            if(validaCampos()) {
+
+                //Editar registro
+                if (id != null) {
+                    db = BancoDeDados.getDatabase(this)
+                    val food = Food(
+                        intent.getIntExtra("id", 0),
+                        edtRestaurante.text.toString(),
+                        rbNota.getRating(),
+                        edtDescricao.text.toString()
+                        ,
+                        edtEndereco.text.toString(),
+                        edtNumEdereco.text.toString(),
+                        edtTelefone.text.toString()
+                    )
+                    if (food.restaurante != "") UpdateAsyncTask(db!!).execute(food)
+                    finish()
+                } else {//Salvar novo registro
+                    db = BancoDeDados.getDatabase(this)
+                    val food = Food(
+                        edtRestaurante.text.toString(), rbNota.getRating(), edtDescricao.text.toString()
+                        , edtEndereco.text.toString(), edtNumEdereco.text.toString(), edtTelefone.text.toString()
+                    )
+                    if (food.restaurante != "") InsertAsyncTask(db!!).execute(food)
+                    finish()
+                }
             }
         }
+
+
     }
 
     private inner class UpdateAsyncTask
