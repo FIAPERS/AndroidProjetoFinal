@@ -11,158 +11,184 @@
             android:text="@string/restaurant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6" android:layout_marginTop="32dp"
+            android:id="@+id/textView6"
+            android:layout_marginTop="16dp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="32dp" android:layout_marginStart="32dp"/>
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.036" android:textStyle="bold"/>
     <TextView
             android:text="@string/ratting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView7" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="56dp" android:layout_marginStart="56dp"
-            app:layout_constraintEnd_toStartOf="@+id/rbNotaPreview" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.0"/>
+            android:id="@+id/textView7"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtRestaurante" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.033" android:textStyle="bold"/>
     <TextView
             android:text="@string/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView8"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="28dp"
-            android:layout_marginStart="28dp"/>
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/rbNotaPreview" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.037" android:textStyle="bold"/>
     <TextView
             android:text="@string/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="48dp" android:layout_marginStart="48dp"
-    />
+            android:id="@+id/textView9"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp" android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtTelefone"
+            android:textStyle="bold"/>
     <TextView
             android:text="@string/num_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView10" android:layout_marginTop="44dp"
-            app:layout_constraintTop_toBottomOf="@+id/rbNotaPreview"
-            app:layout_constraintEnd_toStartOf="@+id/txtNumEndereco"
-            android:layout_marginEnd="12dp" android:layout_marginRight="12dp"
-            app:layout_constraintStart_toEndOf="@+id/txtEndereco" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"/>
+            android:id="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="68dp" android:layout_marginRight="68dp"
+            app:layout_constraintStart_toEndOf="@+id/textView9" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.919"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtTelefone"
+            android:textStyle="bold"/>
     <TextView
             android:text="@string/phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView11" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="60dp"
-            android:layout_marginStart="60dp" android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"
-    />
-    <ImageView
-            android:layout_width="333dp"
-            android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
-            android:id="@+id/imgFotoPreview" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/textView11"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescricao" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="28dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtTelefone" app:layout_constraintHorizontal_bias="0.451"/>
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.033" android:textStyle="bold"/>
 
     <fragment
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="331dp"
-            android:layout_height="200dp"
-            android:id="@+id/mvMapa" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="8dp" android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/imgFotoPreview" app:layout_constraintHorizontal_bias="0.468"
-    />
-
+            android:layout_width="465dp"
+            android:layout_height="225dp"
+            android:id="@+id/mvMapa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.435" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtEndereco"/>
 
 
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtRestaurante" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            app:layout_constraintStart_toEndOf="@+id/textView6" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.092"/>
+            android:id="@+id/txtRestaurante"
+            android:drawableBottom="@color/colorAccent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" app:layout_constraintHorizontal_bias="0.035"/>
     <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/rbNotaPreview" android:layout_marginTop="12dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtRestaurante" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="40dp" android:layout_marginRight="40dp"/>
+            android:id="@+id/rbNotaPreview"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.077"/>
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtDescricao" android:layout_marginTop="4dp"
-            app:layout_constraintTop_toBottomOf="@+id/rbNotaPreview"
-            app:layout_constraintStart_toEndOf="@+id/textView8" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.14"/>
+            android:id="@+id/txtDescricao"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.035"/>
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtEndereco" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtDescricao"
-            app:layout_constraintStart_toEndOf="@+id/textView9" android:layout_marginLeft="32dp"
-            android:layout_marginStart="32dp"/>
+            android:id="@+id/txtEndereco"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp" android:layout_marginStart="20dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:layout_constraintEnd_toStartOf="@+id/txtNumEndereco" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtNumEndereco" android:layout_marginTop="44dp"
-            app:layout_constraintTop_toBottomOf="@+id/rbNotaPreview" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+            android:id="@+id/txtNumEndereco"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="92dp"
+            android:layout_marginRight="92dp"
+    />
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtTelefone" android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtEndereco"
-            app:layout_constraintStart_toEndOf="@+id/textView11" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/btnLigar"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+            android:id="@+id/txtTelefone"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp" android:layout_marginStart="20dp"/>
     <Button
             android:text="@string/delete"
-            android:layout_width="wrap_content"
+            android:layout_width="106dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnDeletar" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/btnEditar"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/mvMapa" app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintVertical_bias="0.594"/>
+            android:id="@+id/btnDeletar"
+            android:backgroundTint="@color/button_save"
+            android:textColor="@color/button_text"
+            android:drawableLeft="@drawable/ic_delete"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/mvMapa" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="32dp" android:layout_marginStart="32dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.106"/>
     <Button
             android:text="@string/edit"
-            android:layout_width="wrap_content"
+            android:layout_width="106dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnEditar" android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/mvMapa" app:layout_constraintVertical_bias="0.676"
-            android:layout_marginEnd="40dp" app:layout_constraintEnd_toStartOf="@+id/btnShared"
-            android:layout_marginRight="40dp"/>
+            android:id="@+id/btnEditar"
+            android:backgroundTint="@color/button_save"
+            android:textColor="@color/button_text"
+            android:drawableLeft="@drawable/ic_edit"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/mvMapa" app:layout_constraintStart_toEndOf="@+id/btnDeletar"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.106"/>
     <Button
             android:text="@string/shared"
-            android:layout_width="wrap_content"
+            android:layout_width="106dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnShared" android:layout_marginTop="52dp"
-            app:layout_constraintTop_toBottomOf="@+id/mvMapa" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="40dp" android:layout_marginRight="40dp" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
-            android:onClick="sharedFoodPermission"/>
+            android:id="@+id/btnShared"
+            android:onClick="sharedFoodPermission"
+            android:backgroundTint="@color/button_save"
+            android:textColor="@color/button_text"
+            android:drawableLeft="@drawable/ic_share"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/mvMapa"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toEndOf="@+id/btnEditar" android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp" app:layout_constraintHorizontal_bias="0.241"
+            app:layout_constraintVertical_bias="0.106"/>
     <Button
             android:text="@string/call"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:id="@+id/btnLigar" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+            android:id="@+id/btnLigar"
+            android:textSize="8dp"
+            android:backgroundTint="@color/button_save"
+            android:textColor="@color/button_text"
+            android:drawableLeft="@drawable/ic_call"
+            app:layout_constraintStart_toEndOf="@+id/txtTelefone"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" android:textStyle="normal"
+            app:layout_constraintHorizontal_bias="0.187"/>
 </android.support.constraint.ConstraintLayout>
