@@ -33,7 +33,4 @@
     <string name="create_an_account">Criar uma Conta</string>
     <string name="login">Entrar</string>
     <string name="password">Senha</string>
-    <string name="toast_validate_restaurant">Campo Restaurante deve ter um valor!</string>
-    <string name="toast_error_create_user">Erro ao criar o usuário.</string>
-    <string name="toast_success_create_user">Usuário criado com sucesso!</string>
 </resources>

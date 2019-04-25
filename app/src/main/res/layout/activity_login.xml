@@ -12,9 +12,9 @@
             android:paddingLeft="24dp"
             android:paddingRight="24dp">
 
-        <ImageView android:src="@drawable/googleg_standard_color_18"
-                   android:layout_width="96dp"
-                   android:layout_height="96dp"
+        <ImageView android:src="@drawable/logoappsmall"
+                   android:layout_width="200dp"
+                   android:layout_height="100dp"
                    android:layout_marginBottom="24dp"
                    android:layout_gravity="center_horizontal"/>
 

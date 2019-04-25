@@ -7,7 +7,7 @@ class Food {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
     var restaurante: String? = null
-    var nota: Float? = null
+    var nota: Float = 0.0f
     var descricao: String? = null
     var endereco: String? = null
     var numEndereco: String? = null

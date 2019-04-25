@@ -2,9 +2,11 @@ package br.com.albertdanielricardo.foodcontrol
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.RatingBar
 import br.com.albertdanielricardo.foodcontrol.model.Food
 
 import br.com.albertdanielricardo.foodcontrol.R
@@ -23,19 +25,23 @@ class FoodAdapter(var foods: List<Food>):
     override fun onCreateViewHolder(parent: ViewGroup, viewType:Int): FoodViewHolder {
         val v = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_food,parent,false)
+
         return FoodViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: FoodViewHolder, i: Int) {
         val food = foods[i]
+        val nota = food!!.nota
         holder.tvProduto.text = food.restaurante
         holder.tvDescricao.text = food.descricao
+        holder.rbNotaCard.setRating(food.nota)
         holder?.foodRestaurante = food
     }
 
     class FoodViewHolder(v: View, var foodRestaurante: Food? = null) : RecyclerView.ViewHolder(v){
         var tvProduto: TextView = v.findViewById(R.id.tvProduto)
         var tvDescricao: TextView = v.findViewById(R.id.tvDescricao)
+        var rbNotaCard: RatingBar = v.findViewById(R.id.rbNotaCard)
 
         init {
             v.setOnClickListener {

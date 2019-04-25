@@ -9,4 +9,14 @@
         tools:showIn="@layout/app_bar_home"
         tools:context=".HomeActivity">
 
+    <ImageView
+            android:id="@+id/ivLogoHome"
+            android:layout_width="347dp"
+            android:layout_height="300dp"
+            android:src="@drawable/logoapp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:alpha="50"/>
+
 </android.support.constraint.ConstraintLayout>

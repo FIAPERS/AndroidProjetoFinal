@@ -7,7 +7,7 @@ import android.content.Context
 import br.com.albertdanielricardo.foodcontrol.dao.FoodDAO
 import br.com.albertdanielricardo.foodcontrol.model.Food
 
-@Database(entities = arrayOf(Food::class), version = 4, exportSchema = false)
+@Database(entities = arrayOf(Food::class), version = 5, exportSchema = false)
 abstract class BancoDeDados : RoomDatabase(){
 
     abstract fun foodDAO(): FoodDAO
