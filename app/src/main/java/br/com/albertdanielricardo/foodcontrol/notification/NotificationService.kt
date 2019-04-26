@@ -8,8 +8,8 @@ class NotificationService : IntentService("") {
     override fun onHandleIntent(intent: Intent?) {
         val msg = intent?.getStringExtra("MSG")
         val msg2 = intent?.getStringExtra("MSG2")
-        Log.i("HEIDER", msg)
-        Log.i("HEIDER2", msg2)
+        Log.i("FoodLog1", msg)
+        Log.i("FoodLog2", msg2)
 
 
     }

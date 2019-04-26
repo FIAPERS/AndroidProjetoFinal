@@ -100,7 +100,7 @@ class NotificationUtils {
 
 
             val pendingIntentYes = PendingIntent.getBroadcast(context, 12345, yesReceive, PendingIntent.FLAG_UPDATE_CURRENT)
-            mNotification.addAction(R.mipmap.ic_launcher, "Yes", pendingIntentYes)
+            mNotification.addAction(R.mipmap.ic_launcher, context.getString(R.string.notification_button), pendingIntentYes)
 
             notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             // mNotificationId is a unique int for each notification that you must define

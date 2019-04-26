@@ -24,7 +24,7 @@
     <string name="title_activity_home">Food Control</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_settings">Sair</string>
+    <string name="action_settings">Exit</string>
     <string name="close_app">Close app</string>
     <string name="logout">Logout</string>
     <string name="configuration">Configuration</string>
@@ -40,4 +40,5 @@
     <string name="toast_validate_restaurant">Field Restaurant must have a value!</string>
     <string name="toast_error_create_user">Error creating user.</string>
     <string name="toast_success_create_user">User created successfully!</string>
+    <string name="notification_button">Yes</string>
 </resources>
