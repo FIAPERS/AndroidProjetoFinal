@@ -41,4 +41,6 @@
     <string name="toast_error_create_user">Error creating user.</string>
     <string name="toast_success_create_user">User created successfully!</string>
     <string name="notification_button">Yes</string>
+    <string name="mewuser">New User</string>
+    <string name="name">Name</string>
 </resources>

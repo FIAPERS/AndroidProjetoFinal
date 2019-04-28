@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true">
 
@@ -14,7 +14,7 @@
 
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:text="New user"
+                  android:text="@string/mewuser"
                   android:textSize="22sp"
                   android:textStyle="bold"
                   android:gravity="center"/>
@@ -27,7 +27,7 @@
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:inputType="textEmailAddress"
-                      android:hint="Name"/>
+                      android:hint="@string/name"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -39,7 +39,7 @@
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:inputType="textEmailAddress"
-                      android:hint="Email"/>
+                      android:hint="@string/e_mail"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -51,9 +51,8 @@
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:inputType="textPassword"
-                      android:hint="Password"/>
+                      android:hint="@string/password"/>
         </android.support.design.widget.TextInputLayout>
-
 
 
         <android.support.v7.widget.AppCompatButton
@@ -66,7 +65,7 @@
                 android:backgroundTint="@color/button_save"
                 android:textColor="@color/button_text"
                 android:drawableLeft="@drawable/ic_create"
-                android:text="Create an account"/>
+                android:text="@string/create_an_account"/>
 
     </LinearLayout>
 </ScrollView>
