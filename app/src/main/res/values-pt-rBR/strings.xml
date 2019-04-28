@@ -33,11 +33,6 @@
     <string name="create_an_account">Criar uma Conta</string>
     <string name="login">Entrar</string>
     <string name="password">Senha</string>
-    <string name="notification_button">Sim</string>
-    <string name="toast_error_create_user">Erro ao criar usuário.</string>
-    <string name="toast_success_create_user">Usuário criado com sucesso!</string>
-    <string name="toast_validate_restaurant">Campo Restaurante deve ter um valor!</string>
-    <string name="action_settings">Sair</string>
     <string name="mewuser">Novo usuário</string>
     <string name="notification_button">Sim</string>
     <string name="toast_success_create_user">Usuario criado com sucesso</string>

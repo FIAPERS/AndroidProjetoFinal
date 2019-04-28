@@ -72,7 +72,7 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="465dp"
-            android:layout_height="225dp"
+            android:layout_height="164dp"
             android:id="@+id/mvMapa"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
