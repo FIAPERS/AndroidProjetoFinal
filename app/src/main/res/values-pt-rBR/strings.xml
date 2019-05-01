@@ -48,4 +48,5 @@
     </string>
     <string name="toast_email_login">Campo E-mail está em branco!</string>
     <string name="toast_password_login">Campo Senha está em branco!</string>
+    <string name="toast_name_sign_up">Campo Nome está em branco!</string>
 </resources>

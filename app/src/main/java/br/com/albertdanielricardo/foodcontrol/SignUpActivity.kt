@@ -20,17 +20,40 @@ class SignUpActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         btCreate.setOnClickListener {
-            mAuth.createUserWithEmailAndPassword(
-                inputEmail.text.toString(),
-                inputPassword.text.toString()
-            ).addOnCompleteListener {
-                if (it.isSuccessful) {
-                    saveInRealTimeDatabase()
-                } else {
-                    Toast.makeText(this@SignUpActivity, it.exception?.message, Toast.LENGTH_SHORT).show()
+
+            if (verifyFields()) {
+
+                mAuth.createUserWithEmailAndPassword(
+                    inputEmail.text.toString(),
+                    inputPassword.text.toString()
+                ).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        saveInRealTimeDatabase()
+                    } else {
+                        Toast.makeText(this@SignUpActivity, it.exception?.message, Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }
+    }
+
+    private fun verifyFields() : Boolean{
+        if (inputName.text.toString() == "" ){
+            Toast.makeText(this@SignUpActivity,getString(R.string.toast_name_sign_up), Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (inputEmail.text.toString() == "" ){
+            Toast.makeText(this@SignUpActivity,getString(R.string.toast_email_login), Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (inputPassword.text.toString() == "" ){
+            Toast.makeText(this@SignUpActivity,getString(R.string.toast_password_login), Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        return true
     }
 
     private fun saveInRealTimeDatabase() {

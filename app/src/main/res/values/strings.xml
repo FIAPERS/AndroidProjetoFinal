@@ -48,4 +48,5 @@
     </string>
     <string name="toast_email_login">Field E-mail is blank!</string>
     <string name="toast_password_login">Field Password is blank!</string>
+    <string name="toast_name_sign_up">Field Name is blank!</string>
 </resources>
