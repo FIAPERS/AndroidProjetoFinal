@@ -29,14 +29,19 @@ class LoginActivity : AppCompatActivity() {
         }
 
         btLogin.setOnClickListener {
-            mAuth.signInWithEmailAndPassword(
-                inputLoginEmail.text.toString(),
-                inputLoginPassword.text.toString()
-            ).addOnCompleteListener {
-                if (it.isSuccessful) {
-                    goToHome()
-                } else {
-                    Toast.makeText(this@LoginActivity, it.exception?.message, Toast.LENGTH_SHORT).show()
+
+
+            if (verifyFields())
+            {
+                mAuth.signInWithEmailAndPassword(
+                    inputLoginEmail.text.toString(),
+                    inputLoginPassword.text.toString()
+                ).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        goToHome()
+                    } else {
+                        Toast.makeText(this@LoginActivity,getString(R.string.toast_error_login), Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }
@@ -44,6 +49,20 @@ class LoginActivity : AppCompatActivity() {
         btSignup.setOnClickListener {
             startActivityForResult(Intent(this, SignUpActivity::class.java), newUserRequestCode)
         }
+    }
+
+    private fun verifyFields() : Boolean{
+        if (inputLoginEmail.text.toString() == "" ){
+            Toast.makeText(this@LoginActivity,getString(R.string.toast_email_login), Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (inputLoginPassword.text.toString() == "" ){
+            Toast.makeText(this@LoginActivity,getString(R.string.toast_password_login), Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        return true
     }
 
     private fun goToHome() {

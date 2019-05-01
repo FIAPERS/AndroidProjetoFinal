@@ -43,4 +43,9 @@
     <string name="notification_button">Yes</string>
     <string name="mewuser">New User</string>
     <string name="name">Name</string>
+    <string name="toast_error_login">The email address that you\'ve entered doesn\'t match any account. Sign up for an
+        account.
+    </string>
+    <string name="toast_email_login">Field E-mail is blank!</string>
+    <string name="toast_password_login">Field Password is blank!</string>
 </resources>

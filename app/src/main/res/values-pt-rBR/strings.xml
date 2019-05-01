@@ -43,4 +43,9 @@
     <string name="navigation_drawer_open">Abrir navegação</string>
     <string name="title_activity_home">Food Control</string>
     <string name="name">Nome</string>
+    <string name="toast_error_login">" O email inserido não corresponde a nenhuma conta. Cadastre-se para abrir uma
+        conta."
+    </string>
+    <string name="toast_email_login">Campo E-mail está em branco!</string>
+    <string name="toast_password_login">Campo Senha está em branco!</string>
 </resources>
